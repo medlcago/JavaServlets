@@ -3,6 +3,5 @@
 </div>
 
 ## Запуск приложения
-- **mvn package**
 - **docker build -t webapp .**
 - **docker run -p 8080:8080 webapp**
