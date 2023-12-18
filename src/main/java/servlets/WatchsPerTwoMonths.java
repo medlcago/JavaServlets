@@ -2,6 +2,7 @@ package servlets;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WatchsPerTwoMonths {
     @JsonProperty("date")
@@ -19,11 +21,5 @@ public class WatchsPerTwoMonths {
 
     @JsonProperty("movieName")
     private String movieName;
-
-    public WatchsPerTwoMonths(LocalDate date, int numOfViews, String movieName) {
-        this.date = date;
-        this.numOfViews = numOfViews;
-        this.movieName = movieName;
-    }
 }
 
