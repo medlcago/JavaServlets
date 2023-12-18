@@ -17,9 +17,13 @@ public class WatchsPerTwoMonths {
     @JsonProperty("numOfViews")
     private int numOfViews;
 
-    public WatchsPerTwoMonths(LocalDate date, int numOfViews) {
+    @JsonProperty("movieName")
+    private String movieName;
+
+    public WatchsPerTwoMonths(LocalDate date, int numOfViews, String movieName) {
         this.date = date;
         this.numOfViews = numOfViews;
+        this.movieName = movieName;
     }
 }
 

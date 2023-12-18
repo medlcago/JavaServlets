@@ -13,4 +13,5 @@ public class Result {
     private LocalDate maxViewsDay;
     private int maxViewsCount;
     private double averageViewsPerDay;
+    private String movieName;
 }

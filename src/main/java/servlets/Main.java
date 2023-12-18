@@ -39,5 +39,6 @@ public class Main {
         System.out.println("\nmaxViewsDay: " + postData.getMaxViewsDay());
         System.out.println("maxViewsCount: " + postData.getMaxViewsCount());
         System.out.println("averageViewsPerDay: " + postData.getAverageViewsPerDay());
+        System.out.println("movieName: " + postData.getMovieName());
     }
 }

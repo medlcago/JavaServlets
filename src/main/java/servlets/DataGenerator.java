@@ -16,8 +16,9 @@ public class DataGenerator {
             for (int j = 0; j < numOfDaysPerMonth; j++) {
                 LocalDate date = LocalDate.now().minusMonths(i).minusDays(j);
                 int numOfViews = faker.number().numberBetween(0, maxNumOfViews);
+                String movieName = faker.book().title();
 
-                WatchsPerTwoMonths movieViews = new WatchsPerTwoMonths(date, numOfViews);
+                WatchsPerTwoMonths movieViews = new WatchsPerTwoMonths(date, numOfViews, movieName);
                 movieViewsList.add(movieViews);
             }
         }

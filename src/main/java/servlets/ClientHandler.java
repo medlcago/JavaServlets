@@ -19,7 +19,8 @@ public class ClientHandler {
         return new Result(
                 maxViewsDay.getDate(),
                 maxViewsDay.getNumOfViews(),
-                averageViews
+                averageViews,
+                maxViewsDay.getMovieName()
         );
     }
 }
