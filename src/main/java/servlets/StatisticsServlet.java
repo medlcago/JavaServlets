@@ -6,6 +6,9 @@ import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import task.ClientHandler;
+import task.Result;
+import task.WatchsPerTwoMonths;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -34,7 +37,7 @@ public class StatisticsServlet extends HttpServlet {
             List<WatchsPerTwoMonths> data = objectMapper.readValue(req.getReader(), new TypeReference<>() {
             });
 
-            // Создание объекта servlets.ClientHandler и вызов метода process()
+            // Создание объекта task.ClientHandler и вызов метода process()
             ClientHandler clientHandler = new ClientHandler();
             Result result = clientHandler.process(data);
 
